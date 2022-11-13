@@ -74,11 +74,15 @@ header {
         color: #003459;
       }
     }
-    input {
-      outline: none;
-      padding: 12px 79px 12px 48px;
+    .search {
+     
+      padding: 12px 79px 12px 17px;
       background: #fdfdfd;
       border-radius: 46px;
+      input{
+         outline: none;
+         border:none;
+      }
     }
   }
 }

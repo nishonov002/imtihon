@@ -194,11 +194,14 @@ header .container ul a {
   /* Primary Color/Dark Blue */
   color: #003459;
 }
-header .container input {
-  outline: none;
-  padding: 12px 79px 12px 48px;
+header .container .search {
+  padding: 12px 79px 12px 17px;
   background: #fdfdfd;
   border-radius: 46px;
+}
+header .container .search input {
+  outline: none;
+  border: none;
 }
 
 .label {
@@ -1783,11 +1786,14 @@ header .container ul a {
   /* Primary Color/Dark Blue */
   color: #003459;
 }
-header .container input {
-  outline: none;
-  padding: 12px 79px 12px 48px;
+header .container .search {
+  padding: 12px 79px 12px 17px;
   background: #fdfdfd;
   border-radius: 46px;
+}
+header .container .search input {
+  outline: none;
+  border: none;
 }
 
 .label {
