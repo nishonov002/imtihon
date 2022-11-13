@@ -1,0 +1,387 @@
+footer {
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 130px;
+    padding-top: 80px;
+    .button {
+      background: #003459;
+      border-radius: 16px;
+      padding: 32px;
+      h2 {
+        width: 389px;
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        /* or 150% */
+
+        text-transform: capitalize;
+
+        /* Neutral Color/00 */
+
+        color: #fdfdfd;
+      }
+      form {
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 12px;
+        input {
+          outline: none;
+          width: 508px;
+          border: 1px solid #99a2a5;
+          border-radius: 8px;
+          padding: 14px 28px;
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          /* Neutral Color/40 */
+
+          color: #99a2a5;
+        }
+        button {
+          outline: none;
+          background: #003459;
+          border-radius: 8px;
+          padding: 14px 28px 10px;
+          gap: 10px;
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: #fdfdfd;
+        }
+      }
+    }
+    .link {
+      padding: 40px 0;
+      border-bottom: 1px solid #99a2a5;
+      .ul-1 {
+        gap: 60px;
+        a {
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+
+          /* Neutral Color/100 */
+
+          color: #00171f;
+        }
+      }
+      .ul-2 {
+        li {
+          a{
+            color: #00171f;
+          }
+          
+        }
+
+        gap: 40px;
+      }
+    }
+    .logo {
+      padding: 40px 0;
+      h2 {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height, or 143% */
+
+        /* Neutral Color/60 */
+
+        color: #667479;
+      }
+      ul {
+        gap: 40px;
+        li {
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: #667479;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  footer {
+    .container {
+      width: 834px;
+      margin: 0 auto;
+      padding: 40px 136px 11px 121px;
+      padding-top: 80px;
+     
+      .button {
+         display: flex;
+        flex-direction: column;
+        background: #003459;
+        border-radius: 16px;
+        padding: 32px 16px;
+        h2 {
+          width: 546px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 32px;
+          /* identical to box height, or 160% */
+
+          text-transform: capitalize;
+
+          color: #fdfdfd;
+        }
+        form {
+          background: #ffffff;
+          border-radius: 14px;
+          padding: 12px;
+          display: flex;
+          align-items:center;
+          input {
+            outline: none;
+            width: 255px;
+            border: 1px solid #99a2a5;
+            border-radius: 8px;
+            padding: 14px 28px;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            /* Neutral Color/40 */
+
+            color: #99a2a5;
+          }
+          button {
+            outline: none;
+            background: #003459;
+            border-radius: 8px;
+            padding: 14px 76px;
+            gap: 10px;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #fdfdfd;
+          }
+        }
+      }
+      .link {
+        padding: 40px 0;
+        border-bottom: 1px solid #99a2a5;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        .ul-1 {
+          width: 578px;
+         justify-content: space-between;
+          a {
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            /* Neutral Color/100 */
+
+            color: #00171f;
+          }
+        }
+        .ul-2 {
+          li {
+            color: #00171f;
+          }
+
+          gap: 40px;
+        }
+      }
+      .logo {
+        padding:120px 0 30px 0;
+        position:relative;
+        flex-direction: column;
+        gap:8px;
+        .img{
+          position:absolute;
+          top:35px;
+        }
+        h2 {
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          /* Neutral Color/60 */
+
+          color: #667479;
+        }
+        ul {
+          gap: 40px;
+          li {
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #667479;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  footer {
+    .container {
+      width: 414px;
+      margin: 0 auto;
+      padding: 0 16px;
+      padding-top: 80px;
+     
+      .button {
+         display: flex;
+        flex-direction: column;
+        background: #003459;
+        border-radius: 16px;
+        padding: 16px;
+        h2 {
+          width: 350px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 32px;
+          /* identical to box height, or 160% */
+
+          text-transform: capitalize;
+
+          color: #fdfdfd;
+        }
+        form {
+          background: #ffffff;
+          border-radius: 14px;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          align-items:center;
+          input {
+            outline: none;
+            width: 326px;
+            border: 1px solid #99a2a5;
+            border-radius: 8px;
+            padding: 14px 28px;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            /* Neutral Color/40 */
+
+            color: #99a2a5;
+          }
+          button {
+            outline: none;
+            background: #003459;
+            border-radius: 8px;
+            padding: 14px 120px;
+            gap: 10px;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #fdfdfd;
+          }
+        }
+      }
+      .link {
+        padding: 40px 0;
+        border-bottom: 1px solid #99a2a5;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        .ul-1 {
+          width: 382px;
+         justify-content: space-between;
+          a {
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            /* Neutral Color/100 */
+
+            color: #00171f;
+          }
+        }
+        .ul-2 {
+          li {
+            color: #00171f;
+          }
+
+          gap: 40px;
+        }
+      }
+      .logo {
+        padding:120px 0 30px 0;
+        position:relative;
+        flex-direction: column;
+        gap:8px;
+        .img{
+          position:absolute;
+          top:35px;
+        }
+        h2 {
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          /* Neutral Color/60 */
+
+          color: #667479;
+        }
+        ul {
+          gap: 40px;
+          li {
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #667479;
+          }
+        }
+      }
+    }
+  }
+}

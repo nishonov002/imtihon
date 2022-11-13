@@ -1,0 +1,251 @@
+.loader {
+  background-color: #fbeed4;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  z-index: 9999;
+  animation: tugadi 0.5s linear 3s both;
+  .loading {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px dashed #000000;
+
+    animation-name: imtihon;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  @keyframes imtihon {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes tugadi {
+    to {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+header {
+  background: linear-gradient(
+    102.87deg,
+    #fceed5 6.43%,
+    #fceed5 78.33%,
+    #ffe7ba 104.24%
+  );
+  .container {
+    position: relative;
+    height: 100px;
+    margin: 0 auto;
+    width: 1440px;
+    padding: 0 130px;
+    .span{
+      display: none;
+    }
+    .mobile-drop {
+      display: none;
+    }
+    .mobile-bars {
+      display: none;
+    }
+    .mobile-check {
+      display: none;
+    }
+    .div-trans {
+      display: none;
+    }
+
+    ul {
+      gap: 48px;
+      a {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        /* Primary Color/Dark Blue */
+
+        color: #003459;
+      }
+    }
+    input {
+      outline: none;
+      padding: 12px 79px 12px 48px;
+      background: #fdfdfd;
+      border-radius: 46px;
+    }
+  }
+}
+.label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  /* identical to box height, or 144% */
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #002a48;
+}
+.drop {
+  top: 60px;
+  right: 130px;
+  position: absolute;
+  display: none;
+  background-color: #ffe7ba;
+
+  li {
+    padding: 5px 20px;
+
+    a {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+      color: #fff;
+      background-color: #ffe7ba;
+    }
+  }
+}
+.input-check {
+  display: none;
+}
+.input-check:checked ~ .drop {
+  display: block;
+}
+@media (max-width: 1000px) {
+  header {
+    .container {
+      position: relative;
+      width: 834px;
+      padding:0 67px;
+      .mobile-desctop {
+        display: none;
+      }
+      .mobile-bars {
+        display: block;
+      }
+      .label{
+        display: none;
+      }
+      .span{
+        display: block;
+      }
+      .div-trans {
+       
+        display: none;
+        position: absolute;
+        padding: 0 42px 0 37px;
+        top: 0px;
+        width: 359px;
+        height: 100%;
+        background: #003459;
+
+        .chiqish {
+          text-align: right;
+          margin: 27px;
+        }
+        ul {
+          margin-top: 7px;
+          gap: 5px;
+          li {
+            a {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              /* identical to box height, or 150% */
+
+              color: #ffffff;
+            }
+          }
+        }
+        .input {
+          outline: none;
+          padding: 12px 79px 12px 48px;
+          background: #fdfdfd;
+          border-radius: 46px;
+        }
+      }
+      .mobile-check:checked + img {
+        display: none;
+      }
+      
+    }
+  }
+}
+@media (max-width: 600px) {
+  header {
+    .container {
+      position: relative;
+      width: 414px;
+      padding:0 16px;
+      .mobile-desctop {
+        display: none;
+      }
+      .mobile-bars {
+        display: block;
+      }
+      .label{
+        display: none;
+      }
+      .span{
+        display: block;
+      }
+      .div-trans {
+       
+        display: none;
+        position: absolute;
+        padding: 0 42px 0 37px;
+        top: 0px;
+        width: 359px;
+        height: 100%;
+        background: #003459;
+
+        .chiqish {
+          text-align: right;
+          margin: 27px;
+        }
+        ul {
+          margin-top: 7px;
+          gap: 5px;
+          li {
+            a {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              /* identical to box height, or 150% */
+
+              color: #ffffff;
+            }
+          }
+        }
+        .input {
+          outline: none;
+          padding: 12px 79px 12px 48px;
+          background: #fdfdfd;
+          border-radius: 46px;
+        }
+      }
+      .mobile-check:checked + img {
+        display: none;
+      }
+      
+    }
+  }
+}

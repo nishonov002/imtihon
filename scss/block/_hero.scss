@@ -1,0 +1,207 @@
+main {
+  .hero {
+    background: linear-gradient(
+      102.87deg,
+      #fceed5 6.43%,
+      #fceed5 78.33%,
+      #ffe7ba 104.24%
+    );
+    .container {
+      margin: 0 auto;
+      width: 1440px;
+      padding: 0 130px;
+      .main {
+        h1 {
+          margin-top: 100px;
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 60px;
+          line-height: 68px;
+          /* identical to box height, or 113% */
+
+          text-transform: capitalize;
+
+          /* Primary Color/Dark Blue 80 */
+
+          color: #002a48;
+        }
+        h2 {
+          margin-top: 4px;
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 46px;
+          line-height: 60px;
+          /* identical to box height, or 130% */
+
+          text-transform: capitalize;
+
+          /* Primary Color/Dark Blue 80 */
+
+          color: #002a48;
+        }
+        p {
+          margin-top: 24px;
+          width: 480px;
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          /* or 150% */
+
+          /* Neutral Color/80 */
+
+          color: #242b33;
+        }
+        div {
+          margin-top: 34px;
+          margin-bottom: 25px;
+          gap: 16px;
+          .och-btn {
+            gap: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  main {
+    .hero {
+      .container {
+        width: 834px;
+      padding: 0 124px 0 130px;
+
+        flex-direction: column;
+        align-items: center;
+        .main {
+          width: 382px;
+          h1 {
+            margin-top: 30px;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 46px;
+            line-height: 60px;
+            /* identical to box height, or 130% */
+
+            text-transform: capitalize;
+
+            /* Primary Color/Dark Blue 80 */
+
+            color: #002a48;
+          }
+          h2 {
+            margin-top: 0;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            /* identical to box height, or 136% */
+
+            text-transform: capitalize;
+
+            /* Primary Color/Dark Blue 80 */
+
+            color: #002a48;
+          }
+          p {
+            margin-top: 12px;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            /* or 150% */
+
+            /* Neutral Color/80 */
+
+            color: #242b33;
+            width: 382px;
+          }
+          div {
+          margin-top: 34px;
+          margin-bottom: 25px;
+          gap: 16px;
+          .och-btn {
+            gap: 11px;
+          }
+        }
+        }
+       
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  main {
+    .hero {
+      .container {
+        padding:0 16px;
+        width: 414px;
+        flex-direction: column;
+        align-items: center;
+        .main {
+          
+          h1 {
+            margin-top: 30px;
+
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 46px;
+            line-height: 60px;
+            /* identical to box height, or 130% */
+
+            text-transform: capitalize;
+
+            /* Primary Color/Dark Blue 80 */
+
+            color: #002a48;
+          }
+          h2 {
+            margin-top: 0;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            /* identical to box height, or 136% */
+
+            text-transform: capitalize;
+
+            /* Primary Color/Dark Blue 80 */
+
+            color: #002a48;
+          }
+          p {
+            margin-top: 12px;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            /* or 150% */
+
+            /* Neutral Color/80 */
+
+            color: #242b33;
+            width: 382px;
+          }
+          div {
+          margin-top: 34px;
+          margin-bottom: 25px;
+          gap: 16px;
+          .och-btn {
+            gap: 11px;
+          }
+        }
+        }
+        
+      }
+    }
+  }
+}

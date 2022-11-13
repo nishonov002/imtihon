@@ -1,0 +1,56 @@
+main {
+  .partners {
+    .container {
+     
+      margin: 0 auto;
+       margin-top: 104px;
+      width: 1440px;
+      padding: 0 130px;
+      .down {
+        width: 1180px;
+        .main {
+          h2 {
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 31px;
+            /* identical to box height, or 194% */
+
+            display: flex;
+            align-items: flex-end;
+
+            color: #000000;
+          }
+          h3 {
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            /* identical to box height, or 150% */
+
+            display: flex;
+            align-items: flex-end;
+            text-transform: capitalize;
+
+            /* Primary Color/Dark Blue */
+
+            color: #003459;
+          }
+        }
+      }
+      .up {
+        width: 1180px;
+        margin-top: 43px;
+      }
+    }
+  }
+}
+@media (max-width:1000px) {
+  main{
+    .partners{
+      display: none;
+    }
+  }
+}

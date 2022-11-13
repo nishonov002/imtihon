@@ -1,0 +1,1943 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.evenly {
+  justify-content: space-evenly;
+}
+
+.kok-btn {
+  background: #003459;
+  border-radius: 57px;
+  padding: 14px 28px 10px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fdfdfd;
+}
+
+.kokcha {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 16px;
+  color: #fdfdfd;
+  padding: 2px 10px;
+  gap: 10px;
+  border-radius: 28px;
+  background: #00a7e7;
+}
+
+.och-btn {
+  border: 2px solid #003459;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #003459;
+  border-radius: 57px;
+  padding: 12px 28px 8px;
+  display: flex;
+  gap: 11px;
+}
+
+.portion {
+  flex: 1;
+}
+
+.gap-1 {
+  gap: 16px;
+}
+
+.gap-2 {
+  gap: 20px;
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/roboto-v30-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin-regular.woff") format("woff"), url("../fonts/roboto-v30-latin-regular.ttf") format("truetype"), url("../fonts/roboto-v30-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
+}
+.loader {
+  background-color: #fbeed4;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  z-index: 9999;
+  -webkit-animation: tugadi 0.5s linear 3s both;
+          animation: tugadi 0.5s linear 3s both;
+}
+.loader .loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px dashed #000000;
+  -webkit-animation-name: imtihon;
+          animation-name: imtihon;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes imtihon {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes imtihon {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes tugadi {
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes tugadi {
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+header {
+  background: linear-gradient(102.87deg, #fceed5 6.43%, #fceed5 78.33%, #ffe7ba 104.24%);
+}
+header .container {
+  position: relative;
+  height: 100px;
+  margin: 0 auto;
+  width: 1440px;
+  padding: 0 130px;
+}
+header .container .span {
+  display: none;
+}
+header .container .mobile-drop {
+  display: none;
+}
+header .container .mobile-bars {
+  display: none;
+}
+header .container .mobile-check {
+  display: none;
+}
+header .container .div-trans {
+  display: none;
+}
+header .container ul {
+  gap: 48px;
+}
+header .container ul a {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+header .container input {
+  outline: none;
+  padding: 12px 79px 12px 48px;
+  background: #fdfdfd;
+  border-radius: 46px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  /* identical to box height, or 144% */
+  display: flex;
+  align-items: flex-end;
+  color: #002a48;
+}
+
+.drop {
+  top: 60px;
+  right: 130px;
+  position: absolute;
+  display: none;
+  background-color: #ffe7ba;
+}
+.drop li {
+  padding: 5px 20px;
+}
+.drop li a {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #fff;
+  background-color: #ffe7ba;
+}
+
+.input-check {
+  display: none;
+}
+
+.input-check:checked ~ .drop {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  header .container {
+    position: relative;
+    width: 834px;
+    padding: 0 67px;
+  }
+  header .container .mobile-desctop {
+    display: none;
+  }
+  header .container .mobile-bars {
+    display: block;
+  }
+  header .container .label {
+    display: none;
+  }
+  header .container .span {
+    display: block;
+  }
+  header .container .div-trans {
+    display: none;
+    position: absolute;
+    padding: 0 42px 0 37px;
+    top: 0px;
+    width: 359px;
+    height: 100%;
+    background: #003459;
+  }
+  header .container .div-trans .chiqish {
+    text-align: right;
+    margin: 27px;
+  }
+  header .container .div-trans ul {
+    margin-top: 7px;
+    gap: 5px;
+  }
+  header .container .div-trans ul li a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #ffffff;
+  }
+  header .container .div-trans .input {
+    outline: none;
+    padding: 12px 79px 12px 48px;
+    background: #fdfdfd;
+    border-radius: 46px;
+  }
+  header .container .mobile-check:checked + img {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  header .container {
+    position: relative;
+    width: 414px;
+    padding: 0 16px;
+  }
+  header .container .mobile-desctop {
+    display: none;
+  }
+  header .container .mobile-bars {
+    display: block;
+  }
+  header .container .label {
+    display: none;
+  }
+  header .container .span {
+    display: block;
+  }
+  header .container .div-trans {
+    display: none;
+    position: absolute;
+    padding: 0 42px 0 37px;
+    top: 0px;
+    width: 359px;
+    height: 100%;
+    background: #003459;
+  }
+  header .container .div-trans .chiqish {
+    text-align: right;
+    margin: 27px;
+  }
+  header .container .div-trans ul {
+    margin-top: 7px;
+    gap: 5px;
+  }
+  header .container .div-trans ul li a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #ffffff;
+  }
+  header .container .div-trans .input {
+    outline: none;
+    padding: 12px 79px 12px 48px;
+    background: #fdfdfd;
+    border-radius: 46px;
+  }
+  header .container .mobile-check:checked + img {
+    display: none;
+  }
+}
+main .hero {
+  background: linear-gradient(102.87deg, #fceed5 6.43%, #fceed5 78.33%, #ffe7ba 104.24%);
+}
+main .hero .container {
+  margin: 0 auto;
+  width: 1440px;
+  padding: 0 130px;
+}
+main .hero .container .main h1 {
+  margin-top: 100px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 68px;
+  /* identical to box height, or 113% */
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue 80 */
+  color: #002a48;
+}
+main .hero .container .main h2 {
+  margin-top: 4px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 60px;
+  /* identical to box height, or 130% */
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue 80 */
+  color: #002a48;
+}
+main .hero .container .main p {
+  margin-top: 24px;
+  width: 480px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  /* Neutral Color/80 */
+  color: #242b33;
+}
+main .hero .container .main div {
+  margin-top: 34px;
+  margin-bottom: 25px;
+  gap: 16px;
+}
+main .hero .container .main div .och-btn {
+  gap: 11px;
+}
+
+@media (max-width: 1000px) {
+  main .hero .container {
+    width: 834px;
+    padding: 0 124px 0 130px;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .hero .container .main {
+    width: 382px;
+  }
+  main .hero .container .main h1 {
+    margin-top: 30px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 60px;
+    /* identical to box height, or 130% */
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue 80 */
+    color: #002a48;
+  }
+  main .hero .container .main h2 {
+    margin-top: 0;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    /* identical to box height, or 136% */
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue 80 */
+    color: #002a48;
+  }
+  main .hero .container .main p {
+    margin-top: 12px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* or 150% */
+    /* Neutral Color/80 */
+    color: #242b33;
+    width: 382px;
+  }
+  main .hero .container .main div {
+    margin-top: 34px;
+    margin-bottom: 25px;
+    gap: 16px;
+  }
+  main .hero .container .main div .och-btn {
+    gap: 11px;
+  }
+}
+@media (max-width: 600px) {
+  main .hero .container {
+    padding: 0 16px;
+    width: 414px;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .hero .container .main h1 {
+    margin-top: 30px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 60px;
+    /* identical to box height, or 130% */
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue 80 */
+    color: #002a48;
+  }
+  main .hero .container .main h2 {
+    margin-top: 0;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    /* identical to box height, or 136% */
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue 80 */
+    color: #002a48;
+  }
+  main .hero .container .main p {
+    margin-top: 12px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* or 150% */
+    /* Neutral Color/80 */
+    color: #242b33;
+    width: 382px;
+  }
+  main .hero .container .main div {
+    margin-top: 34px;
+    margin-bottom: 25px;
+    gap: 16px;
+  }
+  main .hero .container .main div .och-btn {
+    gap: 11px;
+  }
+}
+main .new .container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 130px;
+}
+main .new .container h2 {
+  margin-top: 60px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  color: #000000;
+}
+main .new .container .div {
+  width: 1180px;
+}
+main .new .container .div h3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+main .new .container .grid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+}
+main .new .container .grid .box {
+  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+main .new .container .grid .box h4 {
+  margin-top: 16px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  /* Neutral Color/100 */
+  color: #00171f;
+}
+main .new .container .grid .box h5 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height, or 150% */
+  /* Neutral Color/60 */
+  color: #667479;
+}
+main .new .container .grid .box h5 span {
+  display: flex;
+  align-items: center;
+  color: #54585a;
+}
+main .new .container .grid .box h6 {
+  margin-top: 4px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: flex-end;
+  /* Neutral Color/100 */
+  color: #00171f;
+}
+
+@media (max-width: 1000px) {
+  main .new .container {
+    padding: 0 124px 0 130px;
+    width: 834px;
+  }
+  main .new .container .div {
+    margin-top: 0;
+    width: 574px;
+  }
+  main .new .container .grid {
+    margin-top: 28px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  main .new .container {
+    width: 414px;
+    padding: 0 16px;
+  }
+  main .new .container h2 {
+    font-size: 14px;
+  }
+  main .new .container .div {
+    margin-top: 0;
+    width: 382px;
+  }
+  main .new .container .div h3 {
+    font-size: 20px;
+  }
+  main .new .container .div .och-btn {
+    display: none;
+  }
+  main .new .container .grid {
+    margin-top: 28px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+main .explore {
+  margin-top: 60px;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 130px;
+}
+main .explore .container {
+  border-radius: 20px;
+}
+main .explore .container .img {
+  margin: 36px 0 0 20px;
+}
+main .explore .container .main h2 {
+  margin-top: 64px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 68px;
+  /* identical to box height, or 131% */
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+main .explore .container .main h3 {
+  margin-top: 2px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  /* identical to box height, or 150% */
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+main .explore .container .main p {
+  margin-bottom: 24px;
+  margin-top: 8px;
+  width: 394px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+  text-align: right;
+  /* Neutral Color/80 */
+  color: #242b33;
+}
+
+@media (max-width: 1000px) {
+  main .explore {
+    margin-top: 60px;
+    width: 834px;
+    margin: 0 auto;
+    padding: 0 124px 0 130px;
+  }
+  main .explore .container {
+    border-radius: 20px;
+    padding: 0 24px;
+    flex-direction: column-reverse;
+  }
+  main .explore .container .main {
+    align-items: center;
+    text-align: center;
+  }
+  main .explore .container .main h2 {
+    margin-top: 32px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 54px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue 80 */
+    color: #002a48;
+  }
+  main .explore .container .main h3 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 54px;
+    /* identical to box height, or 150% */
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue */
+    color: #003459;
+  }
+  main .explore .container .main p {
+    margin-bottom: 12px;
+    margin-top: 32px;
+    width: 394px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* or 150% */
+    text-align: center;
+    /* Neutral Color/80 */
+    color: #242b33;
+  }
+}
+@media (max-width: 600px) {
+  main .explore {
+    width: 414px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 0 16px;
+  }
+  main .explore .container {
+    border-radius: 20px;
+    padding: 0 16px;
+    flex-direction: column-reverse;
+  }
+  main .explore .container .main {
+    align-items: center;
+    text-align: center;
+  }
+  main .explore .container .main h2 {
+    margin-top: 32px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 54px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue 80 */
+    color: #002a48;
+  }
+  main .explore .container .main h3 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 54px;
+    /* identical to box height, or 150% */
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue */
+    color: #003459;
+  }
+  main .explore .container .main p {
+    margin-bottom: 12px;
+    margin-top: 32px;
+    width: 394px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* or 150% */
+    text-align: center;
+    /* Neutral Color/80 */
+    color: #242b33;
+  }
+}
+main .products .container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 130px;
+}
+main .products .container h2 {
+  margin-top: 60px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  color: #000000;
+}
+main .products .container .div {
+  width: 1180px;
+}
+main .products .container .div h3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+main .products .container .grid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+main .products .container .grid .box {
+  background: #fdfdfd;
+  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+main .products .container .grid .box .main {
+  padding: 16px;
+}
+main .products .container .grid .box .main h4 {
+  margin-top: 16px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  /* Neutral Color/100 */
+  color: #00171f;
+}
+main .products .container .grid .box .main h5 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height, or 150% */
+  /* Neutral Color/60 */
+  color: #667479;
+}
+main .products .container .grid .box .main h5 span {
+  display: flex;
+  align-items: center;
+  color: #54585a;
+}
+main .products .container .grid .box .main h6 {
+  margin-bottom: 10px;
+  margin-top: 4px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: flex-end;
+  /* Neutral Color/100 */
+  color: #00171f;
+}
+main .products .container .grid .box .main .yellow {
+  padding: 8px 48px 6px 11px;
+  background: #fceed5;
+  border-radius: 8px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: flex-end;
+  /* Primary Color/Dark Blue 80 */
+  color: #002a48;
+}
+
+@media (max-width: 1000px) {
+  main .products .container {
+    width: 834px;
+    margin: 0 auto;
+    padding: 0 124px 0 130px;
+  }
+  main .products .container h2 {
+    margin-top: 60px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    color: #000000;
+  }
+  main .products .container .div {
+    width: 574px;
+  }
+  main .products .container .div h3 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue */
+    color: #003459;
+  }
+  main .products .container .grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  main .products .container .grid .box {
+    background: #fdfdfd;
+    box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  main .products .container .grid .box .main {
+    padding: 16px;
+  }
+  main .products .container .grid .box .main h4 {
+    margin-top: 16px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    /* Neutral Color/100 */
+    color: #00171f;
+  }
+  main .products .container .grid .box .main h5 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+    /* Neutral Color/60 */
+    color: #667479;
+  }
+  main .products .container .grid .box .main h5 span {
+    display: flex;
+    align-items: center;
+    color: #54585a;
+  }
+  main .products .container .grid .box .main h6 {
+    margin-bottom: 10px;
+    margin-top: 4px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    display: flex;
+    align-items: flex-end;
+    /* Neutral Color/100 */
+    color: #00171f;
+  }
+  main .products .container .grid .box .main .yellow {
+    padding: 8px 48px 6px 11px;
+    background: #fceed5;
+    border-radius: 8px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    display: flex;
+    align-items: flex-end;
+    /* Primary Color/Dark Blue 80 */
+    color: #002a48;
+  }
+}
+@media (max-width: 600px) {
+  main .products {
+    display: none;
+  }
+}
+main .partners .container {
+  margin: 0 auto;
+  margin-top: 104px;
+  width: 1440px;
+  padding: 0 130px;
+}
+main .partners .container .down {
+  width: 1180px;
+}
+main .partners .container .down .main h2 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 31px;
+  /* identical to box height, or 194% */
+  display: flex;
+  align-items: flex-end;
+  color: #000000;
+}
+main .partners .container .down .main h3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+main .partners .container .up {
+  width: 1180px;
+  margin-top: 43px;
+}
+
+@media (max-width: 1000px) {
+  main .partners {
+    display: none;
+  }
+}
+main .Adoption {
+  margin: 0 auto;
+  width: 1440px;
+  padding: 0 130px;
+}
+main .Adoption .container {
+  margin-top: 64px;
+  background: #ffb775;
+  border-radius: 20px;
+}
+main .Adoption .container .main {
+  padding: 64px 0 56px 85px;
+}
+main .Adoption .container .main h2 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 68px;
+  /* identical to box height, or 131% */
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+main .Adoption .container .main h3 {
+  margin-top: 2px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  /* identical to box height, or 150% */
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+main .Adoption .container .main p {
+  margin-top: 8px;
+  width: 394px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+  /* Neutral Color/80 */
+  color: #242b33;
+}
+main .Adoption .container .main div {
+  margin-top: 42px;
+}
+
+@media (max-width: 1000px) {
+  main .Adoption {
+    display: none;
+  }
+}
+main .knowledge .container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 130px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+main .knowledge .container h2 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  color: #000000;
+}
+main .knowledge .container .down {
+  width: 1180px;
+  margin-top: 2px;
+}
+main .knowledge .container .down h3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: flex-end;
+  text-transform: capitalize;
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+main .knowledge .container .grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .knowledge .container .grid .box {
+  padding: 8px;
+  background: #ffffff;
+  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+main .knowledge .container .grid .box .main {
+  padding: 8px;
+}
+main .knowledge .container .grid .box .main h4 {
+  margin-top: 12px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  /* Neutral Color/100 */
+  color: #00171f;
+}
+main .knowledge .container .grid .box .main p {
+  margin-top: 6px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+  /* Neutral Color/80 */
+  color: #242b33;
+}
+
+@media (max-width: 1000px) {
+  main .knowledge .container {
+    width: 834px;
+    margin: 0 auto;
+    padding: 0 124px 0 130px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  main .knowledge .container h2 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    color: #000000;
+  }
+  main .knowledge .container .down {
+    width: 574px;
+    margin-top: 2px;
+  }
+  main .knowledge .container .down h3 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue */
+    color: #003459;
+  }
+  main .knowledge .container .grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    place-items: center;
+  }
+  main .knowledge .container .grid .mobile {
+    display: none;
+  }
+  main .knowledge .container .grid .box {
+    width: 380px;
+    padding: 8px;
+    background: #ffffff;
+    box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  main .knowledge .container .grid .box .main {
+    padding: 8px;
+  }
+  main .knowledge .container .grid .box .main h4 {
+    margin-top: 12px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    /* Neutral Color/100 */
+    color: #00171f;
+  }
+  main .knowledge .container .grid .box .main p {
+    margin-top: 6px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    /* Neutral Color/80 */
+    color: #242b33;
+  }
+}
+@media (max-width: 600px) {
+  main .knowledge .container {
+    position: relative;
+    width: 414px;
+    margin: 0 auto;
+    padding: 0 16px;
+    margin-top: 40px;
+    padding-bottom: 110px;
+  }
+  main .knowledge .container h2 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    color: #000000;
+  }
+  main .knowledge .container .down {
+    width: 364px;
+  }
+  main .knowledge .container .down .och-btn {
+    text-align: center;
+    padding: 12px 140px 8px;
+    position: absolute;
+    bottom: 40px;
+  }
+  main .knowledge .container .down h3 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% */
+    display: flex;
+    align-items: flex-end;
+    text-transform: capitalize;
+    /* Primary Color/Dark Blue */
+    color: #003459;
+  }
+  main .knowledge .container .grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    place-items: center;
+  }
+  main .knowledge .container .grid .mobile {
+    display: block;
+  }
+  main .knowledge .container .grid .box {
+    width: 380px;
+    padding: 8px;
+    background: #ffffff;
+    box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+  main .knowledge .container .grid .box .main {
+    padding: 8px;
+  }
+  main .knowledge .container .grid .box .main h4 {
+    margin-top: 12px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    /* Neutral Color/100 */
+    color: #00171f;
+  }
+  main .knowledge .container .grid .box .main p {
+    margin-top: 6px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    /* Neutral Color/80 */
+    color: #242b33;
+  }
+}
+footer {
+  background: linear-gradient(102.87deg, #fceed5 6.43%, #fceed5 78.33%, #ffe7ba 104.24%);
+}
+footer .container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 130px;
+  padding-top: 80px;
+}
+footer .container .button {
+  background: #003459;
+  border-radius: 16px;
+  padding: 32px;
+}
+footer .container .button h2 {
+  width: 389px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  /* or 150% */
+  text-transform: capitalize;
+  /* Neutral Color/00 */
+  color: #fdfdfd;
+}
+footer .container .button form {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px;
+}
+footer .container .button form input {
+  outline: none;
+  width: 508px;
+  border: 1px solid #99a2a5;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  /* Neutral Color/40 */
+  color: #99a2a5;
+}
+footer .container .button form button {
+  outline: none;
+  background: #003459;
+  border-radius: 8px;
+  padding: 14px 28px 10px;
+  gap: 10px;
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fdfdfd;
+}
+footer .container .link {
+  padding: 40px 0;
+  border-bottom: 1px solid #99a2a5;
+}
+footer .container .link .ul-1 {
+  gap: 60px;
+}
+footer .container .link .ul-1 a {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* Neutral Color/100 */
+  color: #00171f;
+}
+footer .container .link .ul-2 {
+  gap: 40px;
+}
+footer .container .link .ul-2 li a {
+  color: #00171f;
+}
+footer .container .logo {
+  padding: 40px 0;
+}
+footer .container .logo h2 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  /* Neutral Color/60 */
+  color: #667479;
+}
+footer .container .logo ul {
+  gap: 40px;
+}
+footer .container .logo ul li {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #667479;
+}
+
+@media (max-width: 1000px) {
+  footer .container {
+    width: 834px;
+    margin: 0 auto;
+    padding: 40px 136px 11px 121px;
+    padding-top: 80px;
+  }
+  footer .container .button {
+    display: flex;
+    flex-direction: column;
+    background: #003459;
+    border-radius: 16px;
+    padding: 32px 16px;
+  }
+  footer .container .button h2 {
+    width: 546px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    text-transform: capitalize;
+    color: #fdfdfd;
+  }
+  footer .container .button form {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+  }
+  footer .container .button form input {
+    outline: none;
+    width: 255px;
+    border: 1px solid #99a2a5;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    /* Neutral Color/40 */
+    color: #99a2a5;
+  }
+  footer .container .button form button {
+    outline: none;
+    background: #003459;
+    border-radius: 8px;
+    padding: 14px 76px;
+    gap: 10px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fdfdfd;
+  }
+  footer .container .link {
+    padding: 40px 0;
+    border-bottom: 1px solid #99a2a5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .container .link .ul-1 {
+    width: 578px;
+    justify-content: space-between;
+  }
+  footer .container .link .ul-1 a {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    /* Neutral Color/100 */
+    color: #00171f;
+  }
+  footer .container .link .ul-2 {
+    gap: 40px;
+  }
+  footer .container .link .ul-2 li {
+    color: #00171f;
+  }
+  footer .container .logo {
+    padding: 120px 0 30px 0;
+    position: relative;
+    flex-direction: column;
+    gap: 8px;
+  }
+  footer .container .logo .img {
+    position: absolute;
+    top: 35px;
+  }
+  footer .container .logo h2 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    /* Neutral Color/60 */
+    color: #667479;
+  }
+  footer .container .logo ul {
+    gap: 40px;
+  }
+  footer .container .logo ul li {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #667479;
+  }
+}
+@media (max-width: 600px) {
+  footer .container {
+    width: 414px;
+    margin: 0 auto;
+    padding: 0 16px;
+    padding-top: 80px;
+  }
+  footer .container .button {
+    display: flex;
+    flex-direction: column;
+    background: #003459;
+    border-radius: 16px;
+    padding: 16px;
+  }
+  footer .container .button h2 {
+    width: 350px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    /* identical to box height, or 160% */
+    text-transform: capitalize;
+    color: #fdfdfd;
+  }
+  footer .container .button form {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .container .button form input {
+    outline: none;
+    width: 326px;
+    border: 1px solid #99a2a5;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    /* Neutral Color/40 */
+    color: #99a2a5;
+  }
+  footer .container .button form button {
+    outline: none;
+    background: #003459;
+    border-radius: 8px;
+    padding: 14px 120px;
+    gap: 10px;
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fdfdfd;
+  }
+  footer .container .link {
+    padding: 40px 0;
+    border-bottom: 1px solid #99a2a5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .container .link .ul-1 {
+    width: 382px;
+    justify-content: space-between;
+  }
+  footer .container .link .ul-1 a {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    /* Neutral Color/100 */
+    color: #00171f;
+  }
+  footer .container .link .ul-2 {
+    gap: 40px;
+  }
+  footer .container .link .ul-2 li {
+    color: #00171f;
+  }
+  footer .container .logo {
+    padding: 120px 0 30px 0;
+    position: relative;
+    flex-direction: column;
+    gap: 8px;
+  }
+  footer .container .logo .img {
+    position: absolute;
+    top: 35px;
+  }
+  footer .container .logo h2 {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    /* Neutral Color/60 */
+    color: #667479;
+  }
+  footer .container .logo ul {
+    gap: 40px;
+  }
+  footer .container .logo ul li {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #667479;
+  }
+}
+.loader {
+  background-color: #fbeed4;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  z-index: 9999;
+  -webkit-animation: tugadi 0.5s linear 3s both;
+          animation: tugadi 0.5s linear 3s both;
+}
+.loader .loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px dashed #000000;
+  -webkit-animation-name: imtihon;
+          animation-name: imtihon;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@keyframes imtihon {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tugadi {
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+header {
+  background: linear-gradient(102.87deg, #fceed5 6.43%, #fceed5 78.33%, #ffe7ba 104.24%);
+}
+header .container {
+  position: relative;
+  height: 100px;
+  margin: 0 auto;
+  width: 1440px;
+  padding: 0 130px;
+}
+header .container .span {
+  display: none;
+}
+header .container .mobile-drop {
+  display: none;
+}
+header .container .mobile-bars {
+  display: none;
+}
+header .container .mobile-check {
+  display: none;
+}
+header .container .div-trans {
+  display: none;
+}
+header .container ul {
+  gap: 48px;
+}
+header .container ul a {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* Primary Color/Dark Blue */
+  color: #003459;
+}
+header .container input {
+  outline: none;
+  padding: 12px 79px 12px 48px;
+  background: #fdfdfd;
+  border-radius: 46px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  /* identical to box height, or 144% */
+  display: flex;
+  align-items: flex-end;
+  color: #002a48;
+}
+
+.drop {
+  top: 60px;
+  right: 130px;
+  position: absolute;
+  display: none;
+  background-color: #ffe7ba;
+}
+.drop li {
+  padding: 5px 20px;
+}
+.drop li a {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #fff;
+  background-color: #ffe7ba;
+}
+
+.input-check {
+  display: none;
+}
+
+.input-check:checked ~ .drop {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  header .container {
+    position: relative;
+    width: 834px;
+    padding: 0 67px;
+  }
+  header .container .mobile-desctop {
+    display: none;
+  }
+  header .container .mobile-bars {
+    display: block;
+  }
+  header .container .label {
+    display: none;
+  }
+  header .container .span {
+    display: block;
+  }
+  header .container .div-trans {
+    display: none;
+    position: absolute;
+    padding: 0 42px 0 37px;
+    top: 0px;
+    width: 359px;
+    height: 100%;
+    background: #003459;
+  }
+  header .container .div-trans .chiqish {
+    text-align: right;
+    margin: 27px;
+  }
+  header .container .div-trans ul {
+    margin-top: 7px;
+    gap: 5px;
+  }
+  header .container .div-trans ul li a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #ffffff;
+  }
+  header .container .div-trans .input {
+    outline: none;
+    padding: 12px 79px 12px 48px;
+    background: #fdfdfd;
+    border-radius: 46px;
+  }
+  header .container .mobile-check:checked + img {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  header .container {
+    position: relative;
+    width: 414px;
+    padding: 0 16px;
+  }
+  header .container .mobile-desctop {
+    display: none;
+  }
+  header .container .mobile-bars {
+    display: block;
+  }
+  header .container .label {
+    display: none;
+  }
+  header .container .span {
+    display: block;
+  }
+  header .container .div-trans {
+    display: none;
+    position: absolute;
+    padding: 0 42px 0 37px;
+    top: 0px;
+    width: 359px;
+    height: 100%;
+    background: #003459;
+  }
+  header .container .div-trans .chiqish {
+    text-align: right;
+    margin: 27px;
+  }
+  header .container .div-trans ul {
+    margin-top: 7px;
+    gap: 5px;
+  }
+  header .container .div-trans ul li a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #ffffff;
+  }
+  header .container .div-trans .input {
+    outline: none;
+    padding: 12px 79px 12px 48px;
+    background: #fdfdfd;
+    border-radius: 46px;
+  }
+  header .container .mobile-check:checked + img {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */
